@@ -1,0 +1,27 @@
+{
+  "family": "medusa-task",
+  "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::YOUR_AWS_ACCOUNT_ID:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "medusa",
+      "image": "YOUR_ECR_IMAGE_URL",
+      "portMappings": [
+        {
+          "containerPort": 9000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "environment": [
+        {
+          "name": "NODE_ENV",
+          "value": "production"
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024"
+}

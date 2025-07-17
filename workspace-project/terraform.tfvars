@@ -1,0 +1,1 @@
+ami = "ami-042b4708b1d05f512"  # Example AMI ID, replace with actual AMI ID
