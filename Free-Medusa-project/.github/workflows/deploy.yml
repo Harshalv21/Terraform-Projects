@@ -2,7 +2,9 @@ name: CI/CD - Medusa Docker
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build-and-push:
